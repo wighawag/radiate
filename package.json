@@ -1,6 +1,6 @@
 {
 	"name": "radiate",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "emitter",
 	"publishConfig": {
 		"access": "public"
@@ -10,9 +10,9 @@
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"devDependencies": {
-		"rimraf": "^4.4.1",
-		"tsup": "^6.7.0",
-		"typescript": "^5.0.4"
+		"rimraf": "^5.0.5",
+		"tsup": "^8.0.1",
+		"typescript": "^5.3.3"
 	},
 	"scripts": {
 		"build": "rimraf dist && tsup src/index.ts --dts --format esm,cjs",

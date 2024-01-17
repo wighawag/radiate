@@ -1,4 +1,10 @@
-export function initEmitter<T>() {
+export type Emitter<T> = {
+	on: (func: (v: T) => void) => () => void;
+	off: (func: (v: T) => void) => void;
+	emit(v: T): void;
+};
+
+export function initEmitter<T>(): Emitter<T> {
 	const callbacks: ((v: T) => void)[] = [];
 
 	function off(func: (v: T) => void) {
